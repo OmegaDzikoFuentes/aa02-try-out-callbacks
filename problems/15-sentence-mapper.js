@@ -26,7 +26,19 @@ console.log(result2); // 'ths s prtty cl rght'
 *******************************************************************************/
 
 let sentenceMapper = function (sentence, cb) {
-  // Your code here 
+
+  let words = sentence.split(' ');
+
+  let newSentenceArr = [];
+
+  for (let i = 0; i < words.length; i++) {
+
+   newSentenceArr.push(cb(words[i]));
+  }
+  
+   let newSentence = newSentenceArr.join(' ');
+
+  return newSentence;
 };
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
