@@ -29,8 +29,31 @@ console.log(result4);   // false
 *******************************************************************************/
 
 function none(array, cb) {
-  // Your code here 
-}
+
+  let count = 0;
+
+  for (let i = 0; i < array.length; i++) {
+
+    if(cb(array[i]) === false) {
+
+      count++;
+
+    }
+  }
+
+  let numOfFalse = count;
+
+    if(numOfFalse === array.length) {
+
+      return true;
+
+    } else {
+
+      return false;
+
+    }
+  }
+
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
